@@ -1,0 +1,203 @@
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t1.lc
+100
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t1.lc
+
+
+Parse for syntactically correct lambda-calculus expression was successful: 
+
+  The overall expression is a constant
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t2.lc
+variable
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t2.lc
+
+
+Parse for syntactically correct lambda-calculus expression was successful: 
+
+  The overall expression is a variable
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t3.lc
+fun123
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t3.lc
+
+
+Parse for syntactically correct lambda-calculus expression was successful: 
+
+  The overall expression is a constant
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t4.lc
+(lambda x . 100)
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t4.lc
+
+
+Parse for syntactically correct lambda-calculus expression was successful: 
+
+  The overall expression is an abstraction
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t5.lc
+(var 123)
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t5.lc
+
+
+Parse for syntactically correct lambda-calculus expression was successful: 
+
+  The overall expression is a combination
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t6.lc
+(((lambda x . (lambda y . (x (x y)))) fun1) 100)
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t6.lc
+
+
+Parse for syntactically correct lambda-calculus expression was successful: 
+
+  The overall expression is a combination
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t7.lc
+(lambda x . (lambda y . (lambda z . (fun0 z))))
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t7.lc
+
+
+Parse for syntactically correct lambda-calculus expression was successful: 
+
+  The overall expression is an abstraction
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t8.lc
+((lambda x.(fun1 x)) 100)
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t8.lc
+
+
+Parse for syntactically correct lambda-calculus expression was successful: 
+
+  The overall expression is a combination
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t9.lc
+(lambda y . (fun123 x))
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t9.lc
+
+
+Parse for syntactically correct lambda-calculus expression was successful: 
+
+  The overall expression is an abstraction
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t10.lc
+(lambda x . (lambda y . (lambda z . (fun123 q))))
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t10.lc
+
+
+Parse for syntactically correct lambda-calculus expression was successful: 
+
+  The overall expression is an abstraction
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t11.lc
+(((fail)
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t11.lc
+
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t12.lc
+(((lambda x . (lambda y . (x (x y)))) fun1) 100
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t12.lc
+
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t13.lc
+(lambda (x . (fun9 x)))
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t13.lc
+
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t14.lc
+((lambda x .(fun1 x)) .x)
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t14.lc
+
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t15.lc
+(lambda x . (lambda y . (lambda z . (fun123 q))
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t15.lc
+
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t16.lc
+lambda x
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t16.lc
+
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t17.lc
+()
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t17.lc
+
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t18.lc
+(x . lambda . y)
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t18.lc
+
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t19.lc
+((almost a) lambda) expression)
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t19.lc
+
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+*****************************************************************************************************
+*****************************************************************************************************
+mclower@mclower-VirtualBox:~/Documents/sde1$ cat t20.lc
+(((lambda x. (lambda y. (x y))) f2) 3)
+mclower@mclower-VirtualBox:~/Documents/sde1$ ./lambda1 <t20.lc
+
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+*****************************************************************************************************
+*****************************************************************************************************
+

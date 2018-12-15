@@ -1,0 +1,30 @@
+/***********************************************************************/
+/* Matthew Lowery                                                      */
+/* CPSC 3520 - sde1                                                    */
+/* lambda1.in - flex scanner input file for lambda calculus            */
+/***********************************************************************/
+
+%{
+#include <stdio.h>
+#define YY_NO_INPUT 1
+#define YY_NO_UNPUT 1
+%}
+
+lambda		"lambda"
+number		[0-9]+
+variable	[a-z]+
+function	"fun"[0-9]+
+whitespace	[ \r\t\n]+
+
+%%
+
+{lambda}	{return LAMBDA;}
+{number}	{return NUMBER;}
+{variable}	{return VARIABLE;}
+{function}	{return FUNCTION;}
+{whitespace}	;
+"("		{return LPARENS;}
+")"		{return RPARENS;}
+"."		{return PERIOD;}
+
+%%
